@@ -1,0 +1,21 @@
+# Dependencies
+# Ignora a pasta com todos os pacotes do Node.js instalados
+/node_modules
+
+# Data files
+# Ignora o arquivo que armazena o ranking dos jogadores
+ranking.json
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
