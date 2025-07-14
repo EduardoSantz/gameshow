@@ -1,142 +1,119 @@
-# gameshow
+# 💰 Show do Milhão (Versão Terminal)
 
-💰 Show do Milhão (Versão Terminal)
-Este é um projeto de um jogo de perguntas e respostas baseado no clássico "Show do Milhão", desenvolvido em JavaScript para ser executado no terminal com Node.js. O objetivo é testar seus conhecimentos gerais e tentar ganhar o prêmio máximo de R$ 1 milhão!
+Este é um projeto de um jogo de perguntas e respostas baseado no clássico “Show do Milhão”, desenvolvido em JavaScript para ser executado no terminal com Node.js. O objetivo é testar seus conhecimentos gerais e tentar ganhar o prêmio máximo de R\$ 1 milhão!
 
-✒️ Autor
-Nome: Jefferson Eduardo Santos Lima 
+---
 
-📜 Regras do Jogo
-Objetivo: O jogador deve responder a uma sequência de 5 perguntas de múltipla escolha para ganhar o prêmio máximo.
+## ✒️ Autor
 
-Níveis de Dificuldade: As perguntas são selecionadas aleatoriamente de um banco de 15 questões com diferentes níveis de dificuldade.
+**Nome:** Jefferson Eduardo Santos Lima
+**GitHub:** [EduardoSantz/gameshow](https://github.com/EduardoSantz/gameshow)
 
-Premiação: Cada rodada possui três valores de premiação:
+---
 
-Acertar: O valor que o jogador acumula se responder corretamente.
+## 📜 Regras do Jogo
 
-Parar: O valor que o jogador leva para casa se decidir parar antes de responder à pergunta da rodada.
+* **Objetivo:** Responder a uma sequência de 5 perguntas de múltipla escolha para ganhar o prêmio máximo.
+* **Níveis de Dificuldade:** As perguntas são selecionadas aleatoriamente de um banco de 15 questões com diferentes níveis de dificuldade.
+* **Premiação:**
 
-Errar: O valor com o qual o jogador fica se errar a pergunta.
+  * **Acertar:** valor acumulado ao responder corretamente.
+  * **Parar:** valor garantido ao escolher parar antes da próxima pergunta.
+  * **Errar:** prêmio de consolação ao errar a pergunta.
+* **Fim de Jogo:**
 
-Fim de Jogo: O jogo termina se o jogador:
+  1. Acertar a última pergunta e ganhar R\$ 1 milhão.
+  2. Parar e levar o prêmio acumulado até a rodada anterior.
+  3. Errar e ficar com o prêmio de consolação.
+* **Ranking:** Os jogadores que ganham algum prêmio aparecem no ranking (top 5), salvo em `ranking.json`.
 
-Acertar a última pergunta e ganhar o prêmio máximo.
+---
 
-Escolher parar e levar o prêmio acumulado até a rodada anterior.
+## 🎮 Como Jogar
 
-Errar uma pergunta e levar o prêmio de consolação.
+1. **Novo Jogo**
 
-Ranking: Os jogadores que ganham algum prêmio são adicionados a um ranking, que exibe as 5 maiores pontuações. O ranking é salvo localmente em um arquivo ranking.json.
+   * Insira seu nome.
+   * Em cada rodada, responda escolhendo 1, 2 ou 3 ou digite **P** para parar.
+2. **Ver Ranking**
 
-🎮 Como Jogar
-Ao iniciar o jogo, você verá um menu principal com as seguintes opções:
+   * Exibe as 5 maiores pontuações registradas.
+3. **Sair**
 
-Novo Jogo:
+   * Encerra o jogo.
 
-Você será solicitado a inserir seu nome.
+---
 
-A cada rodada, uma pergunta com 3 alternativas será exibida. As alternativas são embaralhadas a cada vez.
+## ⚙️ Como Executar
 
-Digite o número da alternativa que você acredita ser a correta (1, 2 ou 3) e pressione ENTER.
+1. **Pré-requisitos:**
 
-Se não tiver certeza da resposta, você pode digitar P e pressionar ENTER para parar o jogo e levar o prêmio acumulado.
+   * [Node.js](https://nodejs.org/) instalado.
+2. **Clone o repositório:**
 
-Ver Ranking:
+   ```bash
+   git clone https://github.com/EduardoSantz/gameshow.git
+   cd gameshow
+   ```
+3. **Inicie o projeto Node.js:**
 
-Exibe a lista dos 5 jogadores com as maiores pontuações.
+   ```bash
+   npm init -y
+   ```
+4. **Instale as dependências:**
 
-Sair:
+   ```bash
+   npm install chalk prompt-sync
+   ```
+5. **Configure o script `start`** em `package.json`:
 
-Encerra o jogo.
+   ```json
+   "scripts": {
+     "start": "node script.js"
+   }
+   ```
+6. **Execute o jogo:**
 
-⚙️ Como Executar o Projeto
-Você precisará ter o Node.js instalado em seu computador.
+   ```bash
+   npm start
+   ```
 
-Clone o Repositório:
+---
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+## ✨ Funcionalidades
 
-Crie o arquivo package.json:
-No terminal, dentro da pasta do projeto, execute o comando abaixo para iniciar um projeto Node.js.
+* **Seleção Aleatória de Perguntas:** sorteia 5 de 15 questões a cada partida.
+* **Alternativas Embaralhadas:** usa shuffle para evitar padrões.
+* **Ranking Persistente:** mantém histórico em `ranking.json`.
 
-npm init -y
+---
 
-Instale as Dependências:
-O projeto utiliza as bibliotecas chalk para estilizar o terminal e prompt-sync para ler a entrada do usuário.
+## 📚 Referências
 
-npm install chalk prompt-sync
+1. **Node.js** – Ambiente de execução JavaScript no terminal
+   [https://nodejs.org/](https://nodejs.org/)
+2. **npm** – Gerenciador de pacotes para Node.js
+   [https://www.npmjs.com/](https://www.npmjs.com/)
+3. **chalk** – Estilização de texto no terminal
+   [https://www.npmjs.com/package/chalk](https://www.npmjs.com/package/chalk)
+4. **prompt-sync** – Entrada de usuário síncrona no terminal
+   [https://www.npmjs.com/package/prompt-sync](https://www.npmjs.com/package/prompt-sync)
+5. **fs** (File System) – Leitura e escrita de arquivos em Node.js
+   [https://nodejs.org/api/fs.html](https://nodejs.org/api/fs.html)
+6. **Game Loop** – Estrutura `while` para manter o jogo em execução
+   [https://maicon.io/entendendo-o-game-loop](https://maicon.io/entendendo-o-game-loop)
+7. **async/await** – Programação assíncrona em JavaScript
+   [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async\_function](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function)
+8. **Fisher–Yates Shuffle** – Algoritmo de embaralhamento de arrays
+   [https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-algorithm/](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-algorithm/)
+9. **try…catch** – Tratamento de erros em JavaScript
+   [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch)
+10. **JSON** – Formato de intercâmbio de dados
+    [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/JSON](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
-Configure o script start:
-Abra o arquivo package.json que foi criado e adicione o seguinte script dentro do objeto "scripts":
+---
 
-"scripts": {
-  "start": "node script.js"
-},
+## 📄 Licença
 
-Execute o Jogo:
-Agora você pode iniciar o jogo com o comando:
-
-npm start
-
-
-✨ Funcionalidades Únicas (Variações)
-Esta versão do Show do Milhão possui algumas características próprias:
-
-Seleção Aleatória de Perguntas: As 5 perguntas de cada partida são sorteadas de um banco com 15 questões, tornando cada jogo diferente.
-
-Alternativas Embaralhadas: A ordem das alternativas de resposta é embaralhada a cada pergunta, evitando que o jogador memorize a posição da resposta correta.
-
-Ranking Persistente: O ranking dos melhores jogadores é salvo em um arquivo ranking.json, mantendo o histórico de pontuações mesmo após fechar o jogo.
-
-🏆 Funcionalidades Bônus Implementadas
-Ranking dos Melhores Jogadores: O jogo salva e exibe um ranking com as 5 melhores pontuações, incentivando a rejogabilidade.
-
-🛠️ Ferramentas e Bibliotecas
-
-Node.js
-Função: Ambiente para executar o jogo no terminal.
-Referência: Node.js
-
-NPM
-Função: Gerenciador de pacotes para instalar as bibliotecas do projeto.
-Referência: npm
-
-chalk
-Função: Adiciona cor e estilo ao texto do terminal.
-Referência: chalk - npm
-
-prompt-sync
-Função: Captura a digitação do usuário no terminal de forma síncrona.
-Referência: prompt-sync - npm
-
-fs (File System)
-Função: Módulo nativo para ler e escrever arquivos, usado para persistir o ranking.
-Referência: File system | Node.js Documentation
-
-💡 Conceitos e Técnicas Aplicadas
-
-Lógica de Jogo (Game Loop)
-Função: Estrutura while que mantém o jogo em execução e processa as ações.
-Referência: Entendendo o Game Loop - Maicon.io
-
-Programação Assíncrona (async/await)
-Função: Cria pausas para melhorar a experiência do usuário sem travar a aplicação.
-Referência: async function - JavaScript | MDN
-
-Algoritmo de Fisher-Yates
-Função: Implementado para embaralhar as perguntas e alternativas de forma aleatória.
-Referência: Shuffle an array using JavaScript (Fisher-Yates shuffle) - GeeksforGeeks
-
-Tratamento de Erros (try...catch)
-Função: Garante que o jogo não pare se ocorrer um erro na leitura ou gravação do ranking.
-Referência: try...catch - JavaScript | MDN
-
-Manipulação de JSON
-Função: Converte o ranking em texto para ser salvo em arquivo e o lê de volta.
-Referência: Trabalhando com JSON - Aprendendo desenvolvimento web | MDN
-
-
-📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes ou leia sobre a licença aqui.
+Este projeto está sob a licença **MIT**.
+Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
