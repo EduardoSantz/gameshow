@@ -100,15 +100,13 @@ Este é um projeto de um jogo de perguntas e respostas baseado no clássico “S
    [https://www.npmjs.com/package/prompt-sync](https://www.npmjs.com/package/prompt-sync)
 5. **fs** (File System) – Leitura e escrita de arquivos em Node.js
    [https://nodejs.org/api/fs.html](https://nodejs.org/api/fs.html)
-6. **Game Loop** – Estrutura `while` para manter o jogo em execução
-   [https://maicon.io/entendendo-o-game-loop](https://maicon.io/entendendo-o-game-loop)
-7. **async/await** – Programação assíncrona em JavaScript
+6. **async/await** – Programação assíncrona em JavaScript
    [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async\_function](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function)
-8. **Fisher–Yates Shuffle** – Algoritmo de embaralhamento de arrays
+7. **Fisher–Yates Shuffle** – Algoritmo de embaralhamento de arrays
    [https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-algorithm/](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-algorithm/)
-9. **try…catch** – Tratamento de erros em JavaScript
+8. **try…catch** – Tratamento de erros em JavaScript
    [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch)
-10. **JSON** – Formato de intercâmbio de dados
+9. **JSON** – Formato de intercâmbio de dados
     [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global\_Objects/JSON](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
 ---
